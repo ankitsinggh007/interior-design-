@@ -1,0 +1,83 @@
+.Contact {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-image: url("../Media/Contact.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.form {
+    display: flex;
+    height: 80vh;
+    background-color: #F2F2F2;
+    
+}
+
+.address {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.icon1 {
+    font-size: 2.5rem;
+    margin-left: 10px;
+}
+
+.icon2 {
+    font-size: 2.8rem;
+
+    margin-left: 10px;
+
+}
+
+.icon3 {
+    font-size: 2.8rem;
+
+    margin-left: 10px;
+
+}
+
+.icon4 {
+    font-size: 2.8rem;
+
+    margin-left: 10px;
+
+}
+
+.icon1:hover {
+    fill: #4867AA
+}
+
+.icon2:hover {
+    fill: #1DA1F2
+}
+
+.icon3:hover {
+    fill: #D803DA
+}
+
+.icon4:hover {
+    fill: #FF0000
+}
+
+.forum {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    padding-top:30px
+}
+
+.Input {
+    height: 3rem;
+    margin: 10px 0px;
+}

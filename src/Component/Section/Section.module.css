@@ -1,0 +1,31 @@
+.background{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.text{
+    font-size: 1.9rem;
+}
+.Title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+    padding: 25px;
+}
+.caption{
+    font-size: 1.9rem;
+    color: grey;
+    font-weight: 500;
+}
+.para{
+    text-align: justify;
+}

@@ -1,0 +1,72 @@
+
+.footer {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.office_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+
+.address {
+    justify-content: space-between;
+    align-self: center;
+    display: flex;
+}
+
+.copywrigth {
+    justify-self: flex-end;
+}
+
+.icon1 {
+    font-size: 1.7rem;
+    margin-left: 20px;
+}
+
+.icon2 {
+    font-size: 1.9rem;
+    margin-left: 20px;
+
+}
+
+.icon3 {
+    font-size: 1.9rem;
+    margin-left: 20px;
+
+}
+
+.icon4 {
+    font-size: 1.9rem;
+    margin-left: 20px;
+
+}
+
+.icon1:hover {
+    fill: #4867AA
+}
+
+.icon2:hover {
+    fill: #1DA1F2
+}
+
+.icon3:hover {
+    fill: #D803DA
+}
+
+.icon4:hover {
+    fill: #FF0000
+}
