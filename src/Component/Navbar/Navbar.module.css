@@ -6,3 +6,11 @@
     background-color: #FFFAFA;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+.impForm{
+    background-color: black;
+    position: absolute;
+    top: 70px;
+    right:75px;
+    color: white;
+    z-index: 10;
+}

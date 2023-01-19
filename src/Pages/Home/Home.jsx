@@ -116,8 +116,7 @@ const Clients=["https://interior-website.netlify.app/img/about/client_6.png","ht
                     Data?.map((img,index)=>{
                         return(
                             <span className={classes.item}>
-                            <img src={img}  width="100%" height="80%" />
-                            <span className={classes.cover}>office</span>
+                            <img src={img}   width="100%" height="80%" />
                             </span>
                         )
                     })

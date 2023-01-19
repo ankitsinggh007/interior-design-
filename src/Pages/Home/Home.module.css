@@ -16,6 +16,9 @@
     font-weight: 500;
     color: gray;
 }
+.item img{
+    backdrop-filter:10px;
+}
 
 .para {
     width: 80%;

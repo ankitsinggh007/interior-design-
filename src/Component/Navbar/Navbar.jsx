@@ -1,21 +1,48 @@
 import classes from "./Navbar.module.css";
-import React from 'react'
+import React,{useState,useContext} from 'react'
 import Logo from "../../Media/Logo.png"
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
+import { User } from "../../App";
+import {Avatar} from '@mui/material';
+import { pink } from '@mui/material/colors';
+
 
 export default function Navbar() {
- 
+  const {LoggedInUserData, setLoggedInUserData,createUser}=useContext(User);
+  console.log(LoggedInUserData)
+  const [Style, setStyle] = useState("none");
+
+  const Toggle=()=>{
+    if(LoggedInUserData?.isAuthrized){
+      if(Style=="none"){
+        setStyle("");
+
+      }
+      else if(Style==""){
+        setStyle("none")
+      }
+    }
+
+  }
+  const Logout=()=>{
+    setLoggedInUserData(
+      {id:"",firstName:"",lastName:"",email:"",Gender:"",isAuthrized:false,Liked:[],Cart:[],isbpn:[],isbpn_Cart:[]}
+    ) 
+}
+
+
+
  
     return (
     <div className={classes.container}>
         <NavLink to="/" className={classes.logo}>
             <img src={Logo} height="70px" width="100px"/>
         </NavLink>
-        <NavLink to={"/about"}  className={classes.about}>About</NavLink>
-        <NavLink to="/contact" className={classes.services}>Contact</NavLink>
+        <NavLink style={{textDecoration:"none",color:"black"}} to={"/about"}  className={classes.about}>About</NavLink>
+        <NavLink to="/contact"style={{textDecoration:"none",color:"black"}} className={classes.services}>Contact</NavLink>
         <div className={classes.contact}>
         
         <Dropdown>
@@ -44,7 +71,29 @@ export default function Navbar() {
       </Dropdown>
 
         </div>
-        <Button variant="dark">Log In</Button>
+        {
+  !LoggedInUserData.isAuthrized && 
+
+<Link style={{textDecoration:"none",color:"white"}} to={"/signup"}><Button style={{textDecoration:"none",color:"white"}} variant="contained" style={{backgroundColor:"#161619",padding:"12px",fontSize:"1rem"}}>Register</Button></Link>
+}
+{
+  LoggedInUserData.isAuthrized && 
+<div style={{positon:"relative"}}>
+<Avatar
+  onClick={Toggle}
+  sx={{ bgcolor:pink[400] }}
+  alt={LoggedInUserData.firstName}
+  src="/broken-image.jpg"
+></Avatar>
+<div className={classes.impForm} style={{display:`${Style}`}}>
+  <ul className={classes.line}>
+    <li>hi, {LoggedInUserData.firstName}</li>
+    <hr style={{width:"100%",margin:"auto"}}/>
+    <li onClick={Logout} style={{cursor:"pointer"}}>Logout</li>
+  </ul>
+  </div>
+</div>
+}
     </div>
   )
 }
