@@ -81,7 +81,7 @@ function Modular() {
                 console.log(array1, "array1");
                 return (
                     <div key={index} className={classes.item}>
-                        <img src={obj.image} className={classes.img} />
+                        <img src={obj.image} width="100%" className={classes.img} />
                         <FaHeart onClick={(e) => LikedImage(obj, e)} className={classes.icons}
                             color={array1.includes(obj.id) ? "red" : "grey"}
 

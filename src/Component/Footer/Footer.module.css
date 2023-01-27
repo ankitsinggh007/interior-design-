@@ -1,8 +1,10 @@
 
 .footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#FFFAFA;
 }
 
 .office_logo {
@@ -18,7 +20,6 @@
     justify-content: center;
     align-items: center;
     justify-content: space-between;
-    align-self: flex-end;
 }
 
 .address {
@@ -68,4 +69,7 @@
 
 .icon4:hover {
     fill: #FF0000
+}
+@media screen and {
+    
 }

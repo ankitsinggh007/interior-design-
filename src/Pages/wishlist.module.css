@@ -9,8 +9,8 @@
     transform: translateX(10px);
 }
 .img{
-    height: 50vh;
-    width: 30vw;
+    /* height: 50vh;
+    width: 30vw; */
     border-radius: 10px;
 }
 .item{

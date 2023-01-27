@@ -29,7 +29,7 @@ function Footer() {
                     <span className={classes.copywrigth}>© Copyright Design Heaven - All Rights Reserved</span>
                 </div>
 
-                <div className={classes.address}>
+                {/* <div className={classes.address}>
                     
 <p style={{display:"flex",flexDirection:"column",justifyContent:"space-between",height:"90%"}}>
 <span><MdLocationOn/>251-
@@ -38,7 +38,7 @@ Karnataka- 110057</span>
 <span><BsTelephoneFill/>M: 9800000000</span>
 <span><MdEmail/>aksahm959173@gmail.com</span>
 </p>
-                </div>
+                </div> */}
                  </div>
     </div>
   )
