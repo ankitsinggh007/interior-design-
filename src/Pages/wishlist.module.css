@@ -1,0 +1,53 @@
+.Container{
+    height: auto;
+    width: 98%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    transition: all .5s ease-in-out;
+    transform: translateX(10px);
+}
+.img{
+    height: 50vh;
+    width: 30vw;
+    border-radius: 10px;
+}
+.item{
+    display: flex;
+    position: relative;
+
+    cursor: pointer;
+    flex-direction: column;
+    overflow: hidden;
+    
+    text-overflow: ellipsis;
+    width: 400px;
+    margin: 5px 0px;
+}
+.specs{
+    color: grey;
+}
+.icons{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    outline-color: aqua;
+}
+.nothing{
+    height:90vh;
+    background-image: url(../Media/empty.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    text-shadow: 10px;
+    font-size:2rem;
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    width: 98%;
+}

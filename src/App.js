@@ -17,8 +17,9 @@ import DataBase from "./Component/Firbase"
 import { collection, addDoc } from "firebase/firestore";  
 import { query, where,getDoc } from "firebase/firestore";
 import { createUserWithEmailAndPassword , getAuth, signInWithEmailAndPassword,signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-
-import Residen from "./Pages/RESIDENTIAL";
+import Wishlist from "./Pages/Wishlist"
+ import Residen from "./Pages/RESIDENTIAL";
+import Modular from "./Pages/Modular";
 export const User=createContext({});
 
 function App() {
@@ -47,6 +48,7 @@ const FetchData= async (email)=>{
     firstName:Creadential.fname,
     lastName:Creadential.lname,
     Gender:Creadential.Gender,
+    Liked:[],
   }); 
   Navigate("/login")
  }
@@ -104,6 +106,9 @@ console.log(LoggedInUserData);
 <Route path="/turnkey" element={<TurnKey/>}/>
 <Route path="/Resdential" element={<Resident/>}/>
 <Route path="/contact" element={<Contact/>}/>
+<Route path="/Modular Kitchen" element={<Modular/>}/>
+<Route path="/wishlist" element={<Wishlist/>}/>
+
 <Route path="/Resdent" element={<Residen/>}/>
 
 </Routes>

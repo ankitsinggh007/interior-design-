@@ -1,0 +1,36 @@
+.Container{
+    height: auto;
+    width: 98%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+.img{
+    height: 50vh;
+    width: 30vw;
+    border-radius: 10px;
+}
+.item{
+    display: flex;
+    position: relative;
+
+    cursor: pointer;
+    flex-direction: column;
+    overflow: hidden;
+    
+    text-overflow: ellipsis;
+    width: 400px;
+    margin: 5px 0px;
+}
+.specs{
+    color: grey;
+}
+.icons{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    outline-color: aqua;
+}

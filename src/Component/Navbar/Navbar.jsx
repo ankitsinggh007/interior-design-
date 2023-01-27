@@ -38,10 +38,12 @@ export default function Navbar() {
  
     return (
     <div className={classes.container}>
-        <NavLink to="/" className={classes.logo}>
-            <img src={Logo} height="70px" width="100px"/>
-        </NavLink>
+        
         <NavLink style={{textDecoration:"none",color:"black"}} to={"/about"}  className={classes.about}>About</NavLink>
+        {LoggedInUserData.isAuthrized &&
+          <NavLink style={{textDecoration:"none",color:"black"}} to={"/wishlist"}  className={classes.about}>Wishlist</NavLink>}
+        <NavLink to="/" className={classes.logo}>
+        </NavLink>
         <NavLink to="/contact"style={{textDecoration:"none",color:"black"}} className={classes.services}>Contact</NavLink>
         <div className={classes.contact}>
         
@@ -51,6 +53,9 @@ export default function Navbar() {
         </Dropdown.Toggle>
 
         <Dropdown.Menu variant="dark">
+        <NavLink to="/Modular Kitchen" style={{textDecoration:"none"}}>
+<Dropdown.Item href="#/action-2">Modular Kitchen</Dropdown.Item>
+</NavLink>
 <NavLink to="/luxury" style={{textDecoration:"none"}}>
 <Dropdown.Item href="#/action-2">LUXURY/COMMERCIAL INTERIOR DESIGNER</Dropdown.Item>
 </NavLink>
@@ -74,7 +79,7 @@ export default function Navbar() {
         {
   !LoggedInUserData.isAuthrized && 
 
-<Link style={{textDecoration:"none",color:"white"}} to={"/signup"}><Button style={{textDecoration:"none",color:"white"}} variant="contained" style={{backgroundColor:"#161619",padding:"12px",fontSize:"1rem"}}>Register</Button></Link>
+<Link style={{textDecoration:"none",color:"white"}} to={"/signup"}><Button style={{textDecoration:"none",color:"white"}}  style={{backgroundColor:"#161619",padding:"12px",fontSize:"1rem"}}>Register</Button></Link>
 }
 {
   LoggedInUserData.isAuthrized && 

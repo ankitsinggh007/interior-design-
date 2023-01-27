@@ -1,9 +1,11 @@
 .container {
-    display:grid;
-    grid-template-columns: repeat(5,1fr);
+    display:flex;
+    grid-template-columns: repeat(6,1fr);
     place-items: center;
     height: 100px;
+    transition: all 1s ease-in-out;
     background-color: #FFFAFA;
+    justify-content: space-evenly;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .impForm{
@@ -13,4 +15,17 @@
     right:75px;
     color: white;
     z-index: 10;
+}
+.logo{
+ width: 17vw;
+ height: 16.5vh;
+ image-rendering: optimizeQuality;
+ background-image: url("../../Media/Logo.png");
+background-size: cover;
+background-position: center;
+}
+.logo p{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
 }
