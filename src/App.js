@@ -20,6 +20,7 @@ import { createUserWithEmailAndPassword , getAuth, signInWithEmailAndPassword,si
 import Wishlist from "./Pages/Wishlist"
  import Residen from "./Pages/RESIDENTIAL";
 import Modular from "./Pages/Modular";
+import Swal from "sweetalert2";
 export const User=createContext({});
 
 function App() {
@@ -40,6 +41,13 @@ const FetchData= async (email)=>{
     console.log(doc.id, " => ", doc.data());
     setLoggedInUserData({...LoggedInUserData,...doc.data(),isAuthrized:true,id:doc.id});
   });
+   Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: `Login Successfully`,
+    showConfirmButton: true,
+    timer: 1500,
+  })  
 }
 // Creat user in DataBase
    const CreateUserInDataBase = async ()=>{
@@ -49,7 +57,14 @@ const FetchData= async (email)=>{
     lastName:Creadential.lname,
     Gender:Creadential.Gender,
     Liked:[],
-  }); 
+  });
+   Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Sucessfully Registered',
+    showConfirmButton: true,
+    timer:1500,
+  }) 
   Navigate("/login")
  }
 // Create User
@@ -61,12 +76,17 @@ const createUser=async (email,password)=>{
       CreateUserInDataBase();
 
   })
-    .catch((error) => {
+    .catch(async(error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorCode,errorMessage,"error");
       setCreadential({...Creadential,message:errorCode.split("/")[1]})
-      
+      await Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: `${errorCode.split("/")[1]}`,
+        showConfirmButton: true,
+      })  
   }); 
 }
 // Login User
@@ -80,12 +100,17 @@ const verifyCredential=async()=>{
       
       Navigate("/")
     })
-    .catch((error) => {
+    .catch(async (error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorCode,errorMessage,"err");
       setCreadential({...Creadential,message:errorCode.split("/")[1]})
-
+      await Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: `${errorCode.split("/")[1]}`,
+        showConfirmButton: true,
+      })  
     });
   
 }

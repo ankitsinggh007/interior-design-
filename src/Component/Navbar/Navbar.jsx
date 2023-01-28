@@ -42,6 +42,7 @@ export default function Navbar() {
         <NavLink style={{textDecoration:"none",color:"black"}} to={"/about"}  className={classes.about}>About</NavLink>
         {LoggedInUserData.isAuthrized &&
           <NavLink style={{textDecoration:"none",color:"black"}} to={"/wishlist"}  className={classes.about}>Wishlist</NavLink>}
+          <NavLink style={{textDecoration:"none",color:"black"}} to="/Modular Kitchen"  className={classes.about}>Kitchen</NavLink>
         <NavLink to="/" className={classes.logo}>
         </NavLink>
         <NavLink to="/contact"style={{textDecoration:"none",color:"black"}} className={classes.services}>Contact</NavLink>
@@ -53,9 +54,6 @@ export default function Navbar() {
         </Dropdown.Toggle>
 
         <Dropdown.Menu variant="dark">
-        <NavLink to="/Modular Kitchen" style={{textDecoration:"none"}}>
-<Dropdown.Item href="#/action-2">Modular Kitchen</Dropdown.Item>
-</NavLink>
 <NavLink to="/luxury" style={{textDecoration:"none"}}>
 <Dropdown.Item href="#/action-2">LUXURY/COMMERCIAL INTERIOR DESIGNER</Dropdown.Item>
 </NavLink>
