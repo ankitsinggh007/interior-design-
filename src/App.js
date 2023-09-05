@@ -1,8 +1,7 @@
 import Footer from "./Component/Footer/Footer";
 import Navbar from "./Component/Navbar/Navbar";
-import Slider from "./Component/Slider";
-import { Route,Routes,Navigate, useNavigate } from "react-router-dom";
-import { useState,useEffect, createContext } from "react";
+import { Route,Routes, useNavigate } from "react-router-dom";
+import { useState, createContext } from "react";
 import Login from "./Pages/Login.jsx"
 import Signup from "./Pages/Signup.jsx"
 import Home from "./Pages/Home/Home";
@@ -15,7 +14,7 @@ import Resident from "./Pages/Resident";
 import { getDocs } from 'firebase/firestore';
 import DataBase from "./Component/Firbase"
 import { collection, addDoc } from "firebase/firestore";  
-import { query, where,getDoc } from "firebase/firestore";
+import { query, where } from "firebase/firestore";
 import { createUserWithEmailAndPassword , getAuth, signInWithEmailAndPassword,signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import Wishlist from "./Pages/Wishlist"
  import Residen from "./Pages/RESIDENTIAL";
